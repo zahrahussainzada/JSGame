@@ -14,8 +14,8 @@
             color:bisque;
             background: linear-gradient(
                 to left,
-                rgb(116, 82, 176),
-                rgb(50, 1, 103));
+                black,
+                white);
                 font-family: "Rubik Puddles", system-ui;
                 text-align: center;
                 text-justify: center;
@@ -237,18 +237,18 @@ renderLeaderBoard();
                 // console.log(secretNumber);
                 // console.log(userGuess); debugging
                  console.log(secretNumber);
-                messageEl.innerText=userGuess < secretNumber ? "Too Low!" : "Too High!";
+                 // messageEl.innerText=userGuess < secretNumber ? "Too Low!" : "Too High!";
                 let distance=Math.abs(userGuess-secretNumber);
                 if(distance<=2){
-                    hintEl.innerText="🔥 Very Close!";
+                    hintEl.innerText="🔥 Very Close! but the number is not" +usserGuess;
                     soundClose.play();
                 }
                 else if(distance<=5){
-                    hintEl.innerText="🙃 Close!";
+                    hintEl.innerText="🙃 Close!but the number is not" +usserGuess";
                     soundWrong.play();
                 }
                 else{
-                    hintEl.innerText="s❄️ Far away!";
+                    hintEl.innerText="❄️ Far away!";
                     soundWrong.play();
                 }
             }
